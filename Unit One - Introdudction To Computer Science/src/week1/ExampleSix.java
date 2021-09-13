@@ -8,6 +8,7 @@ public class ExampleSix {
     int x = 1;
     int y = 3;
     double z = 1;
+    int s = 5;
 
     x = x + 1; // (x = 2) take x add 1 to it and assign it back to x
     y = y - 1; // (y = 2)
@@ -22,6 +23,12 @@ public class ExampleSix {
 
     x++; // x += 1 and x = x + 1
     y--; // y -= 1 and y = y - 1
+    
+    s++;
+    ++s;
+    s--;
+    --s;
+    System.out.println(s);
 
   }
 }

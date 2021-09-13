@@ -6,6 +6,8 @@ public class ExampleOne {
         System.out.println();
         System.out.print("Welcome to ICS3U - AP");
 
+        System.out.println("sdflkj");
+
         //System.out.print("LOLZ");
         
     }    
