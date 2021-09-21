@@ -36,13 +36,23 @@ public class Student {
     this.average = 0;
   }
 
+  public Student(String name, String studentNumber) {
+    this.name = name;
+    this.studentNumber = studentNumber;
+    this.grade = 9;
+    this.totalMarks = 40;
+    this.numMarks = 39;
+    this.average = 0;
+  }
+
   /**
    * displayName, displayStudentNumber, increaseGrade, displayGrade The methods
    * (actions) in a class define behaviour for the class
    */
   public void displayName() {
     System.out.println(name);
-  }
+    
+    }
 
   /**
    * A void method performs a task but does not return a value
@@ -77,6 +87,13 @@ public class Student {
 
   private void calculateAverage() {
     average = (double) totalMarks / numMarks;
+  }
+  public String getName(){
+    return name;
+  }
+  public double getAvg(){
+    return average;
+
   }
   
 
