@@ -6,7 +6,7 @@ public class thingToDo {
     public static void main(String[] args) {
 
     classThingy objectTest = new classThingy("this is a test");
-    System.out.println(objectTest.get_test());    
+    System.out.println(objectTest.get_test());     
 
     }
     
