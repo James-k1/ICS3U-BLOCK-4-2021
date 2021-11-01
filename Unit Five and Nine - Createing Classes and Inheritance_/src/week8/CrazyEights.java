@@ -402,7 +402,8 @@ private static String processPlayer(Scanner in, String playerHand, String topCar
       
       card = in.nextLine().toUpperCase(); //lets the user give input
       System.out.println();
-      if (playerHand.indexOf(card) > -1 && card.length() > 1 && card.indexOf(" ")==-1 && cardValid(card,topCard)){ // checks if the player card exists and if its valid
+      if (playerHand.indexOf(card) > -1 && card.length() > 1 && card.indexOf(" ")==-1 && cardValid(card,topCard) ){ // checks if the player card exists and if its valid
+         
          validInput = true;
          if (card.indexOf("8")!=-1){ //checks if the card is an 8
             suit = promptSuit(in); //prompts user for a suit
@@ -469,9 +470,13 @@ private static boolean cardValid(String card, String topCard) {
    if (card.substring(0,card.length()-1).equals("8")){ //checks if the cards rank is an 8
       return true;
    }
-   else if ((topCard.indexOf(card.substring(0,card.length()-1))!=-1||topCard.indexOf(card.substring(card.length()-1))!=-1)){ //checks if the card has the same suit or rank as the topCard
+   // else if ((topCard.indexOf(card.substring(0,card.length()-1))!=-1||topCard.indexOf(card.substring(card.length()-1))!=-1)){ //checks if the card has the same suit or rank as the topCard
+   //    return true;
+   else if (card.indexOf(topCard.substring(0,topCard.length()-1))!=-1||card.indexOf(topCard.substring(topCard.length()-1))!=-1){ //checks if the card has the same suit or rank as the topCard
       return true;
+
    }
+   
    return false; 
 }
 
