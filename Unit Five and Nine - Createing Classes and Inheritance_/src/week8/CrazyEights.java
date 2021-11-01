@@ -402,7 +402,7 @@ private static String processPlayer(Scanner in, String playerHand, String topCar
       
       card = in.nextLine().toUpperCase(); //lets the user give input
       System.out.println();
-      if (playerHand.indexOf(card) > -1 && card.indexOf(" ")==-1 && cardValid(card,topCard)){ // checks if the player card exists and if its valid
+      if (playerHand.indexOf(card) > -1 && card.length() > 1 && card.indexOf(" ")==-1 && cardValid(card,topCard)){ // checks if the player card exists and if its valid
          validInput = true;
          if (card.indexOf("8")!=-1){ //checks if the card is an 8
             suit = promptSuit(in); //prompts user for a suit
