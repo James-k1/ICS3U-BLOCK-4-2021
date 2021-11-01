@@ -472,7 +472,7 @@ private static boolean cardValid(String card, String topCard) {
    }
    // else if ((topCard.indexOf(card.substring(0,card.length()-1))!=-1||topCard.indexOf(card.substring(card.length()-1))!=-1)){ //checks if the card has the same suit or rank as the topCard
    //    return true;
-   else if (card.indexOf(topCard.substring(0,topCard.length()-1))!=-1||card.indexOf(topCard.substring(topCard.length()-1))!=-1){ //checks if the card has the same suit or rank as the topCard
+   else if (card.indexOf(topCard.substring(0,topCard.length()-1))!=-1||card.indexOf(topCard.substring(topCard.length()-1))!=-1 && card.substring(0,card.length()-1).length()!=card.length()){ //checks if the card has the same suit or rank as the topCard
       return true;
 
    }
