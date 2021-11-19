@@ -322,7 +322,7 @@ public class DoubleArraySequence {
       if (!isCurrent()){
          throw new IllegalStateException("No Current Element.");
       }
-      for (int i = currentIndex; i <manyItems; i++){
+      for (int i = currentIndex; i <manyItems-1; i++){
          data[i]=data[i+1];
       }
       manyItems--;
